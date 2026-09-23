@@ -1,4 +1,4 @@
-﻿services:
+services:
   - type: web
     name: exam-answer-matcher
     env: python
@@ -7,3 +7,7 @@
     envVars:
       - key: GEMINI_API_KEY
         sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
