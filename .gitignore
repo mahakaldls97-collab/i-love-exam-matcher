@@ -1,0 +1,8 @@
+﻿.env
+*.env
+__pycache__/
+*.pyc
+test_*.py
+list_models.py
+find_model.py
+extracted_sample.json
