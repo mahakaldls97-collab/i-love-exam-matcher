@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Result & Analysis | I LOVE EXAM MATCHER</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+</head>
+<body>
+
+  <!-- ==================== Header ==================== -->
+  <header class="site-navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link">
+        <span class="brand-heart">❤️</span>
+        <div class="brand-text-wrap">
+          <span class="brand-title">I LOVE EXAM MATCHER</span>
+          <span class="brand-subtitle">Match Your Questions · Get Your Result</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open Menu">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+        <li><a href="how-it-works.html" class="nav-link">⚙️ How It Works</a></li>
+        <li><a href="features.html" class="nav-link">⭐ Features</a></li>
+        <li><a href="match.html" class="nav-link">🔄 Match</a></li>
+        <li><a href="omr-set.html" class="nav-link">📋 OMR Set <span class="nav-badge-new">New</span></a></li>
+        <li><a href="result.html" class="nav-link active">📊 Result & Analysis</a></li>
+        <li><a href="about.html" class="nav-link">ℹ️ About</a></li>
+        <li><a href="login.html" class="nav-btn-login"><span>👤</span> Login / Sign Up</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ==================== Main Content: Slide 4 & 7 Result & Analysis ==================== -->
+  <main class="main-content">
+    <div class="container-xl">
+
+      <!-- Slide 4 Success Banner -->
+      <div class="result-success-banner">
+        <span style="font-size: 1.3rem;">✅</span>
+        <div>
+          <strong>Matching Completed Successfully!</strong> Your question paper and answer key have been matched. Here is your result:
+        </div>
+      </div>
+
+      <!-- Slide 4 Top 4 Metric Cards -->
+      <div class="result-metrics-grid">
+        <!-- Metric 1: Total Questions -->
+        <div class="metric-card metric-blue">
+          <div class="metric-icon-box">📋</div>
+          <div class="metric-info">
+            <span class="metric-label">Total Questions</span>
+            <span class="metric-value" id="metricTotal">50</span>
+          </div>
+        </div>
+
+        <!-- Metric 2: Correct Answers -->
+        <div class="metric-card metric-green">
+          <div class="metric-icon-box">✅</div>
+          <div class="metric-info">
+            <span class="metric-label">Correct Answers</span>
+            <span class="metric-value" id="metricCorrect">42</span>
+          </div>
+        </div>
+
+        <!-- Metric 3: Wrong Answers -->
+        <div class="metric-card metric-red">
+          <div class="metric-icon-box">❌</div>
+          <div class="metric-info">
+            <span class="metric-label">Wrong Answers</span>
+            <span class="metric-value" id="metricWrong">8</span>
+          </div>
+        </div>
+
+        <!-- Metric 4: Total Score -->
+        <div class="metric-card metric-purple">
+          <div class="metric-icon-box">🏆</div>
+          <div class="metric-info">
+            <span class="metric-label">Total Score</span>
+            <span class="metric-value" id="metricScore">84 / 100</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 7: Result & Analysis (Circular Score & Subject Wise Split) -->
+      <div class="page-header-center" style="margin-top: 1.5rem; margin-bottom: 1.25rem;">
+        <div class="page-title-badge">
+          <span style="color:#0d6efd;font-size:1.8rem;">📊</span>
+          <span>Result & Analysis</span>
+        </div>
+        <p class="page-subtitle">Detailed Report for Better Understanding</p>
+      </div>
+
+      <div class="analysis-split-grid">
+        <!-- Left Box: Overall Result with Circular Progress -->
+        <div class="analysis-box">
+          <div class="analysis-box-title">
+            <span>📈</span> Overall Result
+          </div>
+
+          <div class="circular-score-wrapper">
+            <!-- Circular Donut Chart matching Slide 7 -->
+            <div class="circular-progress">
+              <svg viewBox="0 0 140 140">
+                <circle class="circle-bg" cx="70" cy="70" r="60"></circle>
+                <circle class="circle-bar" cx="70" cy="70" r="60"></circle>
+              </svg>
+              <div class="circle-text">
+                <div class="circle-percent" id="circlePercent">84%</div>
+                <div class="circle-sublabel">ACCURACY</div>
+              </div>
+            </div>
+
+            <!-- Stats Breakdown -->
+            <div class="score-stats-breakdown">
+              <div style="font-size: 1.2rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 4px;" id="overallScoreText">
+                Score: 84 / 100
+              </div>
+              <div class="stat-row-item">
+                <span style="color:var(--success);font-size:1.1rem;">✓</span>
+                <span>Correct: <strong style="color:var(--success);" id="statCorrect">42</strong></span>
+              </div>
+              <div class="stat-row-item">
+                <span style="color:var(--danger);font-size:1.1rem;">✗</span>
+                <span>Wrong: <strong style="color:var(--danger);" id="statWrong">8</strong></span>
+              </div>
+              <div class="stat-row-item">
+                <span style="color:var(--primary-blue);font-size:1.1rem;">●</span>
+                <span>Total Questions: <strong id="statTotal">50</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Box: Subject Wise Analysis matching Slide 7 -->
+        <div class="analysis-box">
+          <div class="analysis-box-title">
+            <span>📚</span> Subject Wise Analysis
+          </div>
+
+          <div class="subject-bars-list" id="subjectBarsList">
+            <!-- Math -->
+            <div class="subject-bar-item">
+              <div class="subject-bar-header">
+                <span>Mathematics</span>
+                <span style="color:#0d6efd;font-weight:700;">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-math"></div>
+              </div>
+            </div>
+
+            <!-- Science -->
+            <div class="subject-bar-item">
+              <div class="subject-bar-header">
+                <span>Science</span>
+                <span style="color:#00b4d8;font-weight:700;">80%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-sci"></div>
+              </div>
+            </div>
+
+            <!-- English -->
+            <div class="subject-bar-item">
+              <div class="subject-bar-header">
+                <span>English</span>
+                <span style="color:#7209b7;font-weight:700;">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-eng"></div>
+              </div>
+            </div>
+
+            <!-- Social Science -->
+            <div class="subject-bar-item">
+              <div class="subject-bar-header">
+                <span>Social Science</span>
+                <span style="color:#f77f00;font-weight:700;">75%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-soc"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Question Wise Result Table -->
+      <section class="table-card">
+        <div class="table-card-header">
+          <div class="table-card-title">
+            <span>📋</span> Question Wise Result
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button onclick="window.print()" class="check-pill" style="cursor:pointer;background:#ffffff;">
+              🖨️ Print / Download PDF
+            </button>
+            <a href="match.html" class="check-pill" style="text-decoration:none;cursor:pointer;background:#ffffff;">
+              🔄 Match Another Paper
+            </a>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="result-table">
+            <thead>
+              <tr>
+                <th style="width: 100px;">S.No (Paper)</th>
+                <th style="width: 140px;">Matched Q.No (Answer Key)</th>
+                <th>Question (Preview)</th>
+                <th style="width: 110px;">Correct Answer</th>
+                <th style="width: 110px;">Your Answer</th>
+                <th style="width: 110px;">Result</th>
+              </tr>
+            </thead>
+            <tbody id="resultTableBody">
+              <!-- Dynamically rendered by app.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Table Pagination & Counter matching Slide 4 -->
+        <div class="pagination-row">
+          <div id="tableCounterText">Showing 1 to 5 of 50 questions</div>
+          <div class="pagination-btns" id="paginationBtns">
+            <!-- Dynamically populated page buttons -->
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span>❤️</span> I LOVE EXAM MATCHER
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="match.html">Match</a></li>
+        <li><a href="omr-set.html">OMR Set</a></li>
+        <li><a href="result.html">Result</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <p class="footer-copy">
+        © 2026 I LOVE EXAM MATCHER. Precise Score & Question-Wise Matching.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

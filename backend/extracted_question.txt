@@ -1,0 +1,29 @@
+[
+  {
+    "question_number": "1",
+    "question_text_hindi": "नीचे दो कथन दिए गए हैं, एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में नामांकित किया गया है।\nअभिकथन (A) :\nत्रिज्या 8 cm के एक बड़े धातु ठोस गोले को पिघलाया जाता है और इसे 2 cm त्रिज्या के छोटे ठोस गोलाकार गेंदों में फिर से ढाला जाता है। ठीक 64 छोटी गेंदें बनाई जा सकती हैं।\nकारण (R) :\nजब एक ठोस को पिघलाया जाता है और दूसरे ठोस/ठोसों के रूप में ढाला जाता है, तब पदार्थ का कुल पृष्ठ क्षेत्रफल संरक्षित रहता है।\nउपर्युक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सबसे उपयुक्त उत्तर चुनें :",
+    "question_text_english": "Given below are two statements, one is labelled as Assertion (A) and other one labelled as Reason (R).\nAssertion (A) :\nA large metallic solid sphere of radius 8 cm is melted and recast into small solid spherical balls of radius 2 cm. Exactly 64 small balls can be formed.\nReason (R) :\nWhen a solid is melted and recast into another solid(s), the total surface area of the material remains conserved.\nIn light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": {
+      "A": {
+        "hindi": "(A) और (R) दोनों ही सही हैं और (R), (A) की सही व्याख्या है।",
+        "english": "Both (A) and (R) are correct and (R) is the correct explanation of (A)."
+      },
+      "B": {
+        "hindi": "(A) और (R) दोनों ही सही हैं लेकिन (R), (A) की सही व्याख्या नहीं है।",
+        "english": "Both (A) and (R) are correct but (R) is NOT the correct explanation of (A)."
+      },
+      "C": {
+        "hindi": "(A) सही है लेकिन (R) सही नहीं है।",
+        "english": "(A) is correct but (R) is not correct."
+      },
+      "D": {
+        "hindi": "(A) सही नहीं है लेकिन (R) सही है।",
+        "english": "(A) is not correct but (R) is correct."
+      },
+      "E": {
+        "hindi": "अनुत्तरित प्रश्न",
+        "english": "Question not attempted"
+      }
+    }
+  }
+]

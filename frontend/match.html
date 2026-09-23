@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Papers | I LOVE EXAM MATCHER</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+</head>
+<body>
+
+  <!-- ==================== Header ==================== -->
+  <header class="site-navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link">
+        <span class="brand-heart">❤️</span>
+        <div class="brand-text-wrap">
+          <span class="brand-title">I LOVE EXAM MATCHER</span>
+          <span class="brand-subtitle">Match Your Questions · Get Your Result</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open Menu">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+        <li><a href="how-it-works.html" class="nav-link">⚙️ How It Works</a></li>
+        <li><a href="features.html" class="nav-link">⭐ Features</a></li>
+        <li><a href="match.html" class="nav-link active">🔄 Match</a></li>
+        <li><a href="omr-set.html" class="nav-link">📋 OMR Set <span class="nav-badge-new">New</span></a></li>
+        <li><a href="result.html" class="nav-link">📊 Result & Analysis</a></li>
+        <li><a href="about.html" class="nav-link">ℹ️ About</a></li>
+        <li><a href="login.html" class="nav-btn-login"><span>👤</span> Login / Sign Up</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ==================== Main Content: Match Upload ==================== -->
+  <main class="main-content">
+    <div class="container-lg">
+
+      <div class="page-header-center">
+        <div class="page-title-badge">
+          <span style="color:#0d6efd;font-size:1.8rem;">🔄</span>
+          <span>Upload & Auto Match Papers</span>
+        </div>
+        <p class="page-subtitle">अपना Question Paper और Official Answer Key यहाँ upload करें</p>
+      </div>
+
+      <div class="hero-wrapper" style="padding: 2rem;">
+        <div style="background:#eef6ff;border:1px solid #bfdbfe;border-radius:var(--radius-md);padding:1rem 1.25rem;margin-bottom:1.75rem;display:flex;align-items:center;gap:0.75rem;font-size:0.92rem;color:var(--primary-navy);">
+          <span style="font-size:1.4rem;">💡</span>
+          <div>
+            <strong>AI Semantic Matching Active:</strong> यदि आपके पेपर में प्रश्न क्रमांक अलग-अलग हैं (उदा. Set A vs Set B), तो हमारा AI सिस्टम प्रत्येक प्रश्न के शब्दों को पहचानकर अपने-आप सही Answer Key से मिलाएगा।
+          </div>
+        </div>
+
+        <!-- 2 Dropzones Grid -->
+        <div class="upload-dropzone-grid">
+          <!-- Dropzone 1: Question Paper -->
+          <div class="dropzone-box" id="dropzonePaper">
+            <input type="file" id="inputPaper" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="dropzone-icon">📄</div>
+            <div class="dropzone-title">Upload Question Paper</div>
+            <div class="dropzone-sub">Click to upload or drag & drop (PDF / Image)</div>
+            <div class="file-selected-pill"></div>
+          </div>
+
+          <!-- Dropzone 2: Answer Key -->
+          <div class="dropzone-box" id="dropzoneKey">
+            <input type="file" id="inputKey" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="dropzone-icon">🔑</div>
+            <div class="dropzone-title">Upload Official Answer Key</div>
+            <div class="dropzone-sub">Click to upload or drag & drop (PDF / Image)</div>
+            <div class="file-selected-pill"></div>
+          </div>
+        </div>
+
+        <!-- Optional Series Set Selector -->
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;background:#f8fafc;padding:1rem;border-radius:var(--radius-md);border:1px solid var(--border-color);margin-bottom:2rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <label style="font-weight:700;font-size:0.9rem;color:var(--primary-navy);">Your Series / Set:</label>
+            <select style="padding:0.4rem 0.85rem;border-radius:var(--radius-sm);border:1px solid var(--border-color);font-weight:600;">
+              <option value="A">Series A (Default)</option>
+              <option value="B">Series B</option>
+              <option value="C">Series C</option>
+              <option value="D">Series D</option>
+            </select>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <label style="font-weight:700;font-size:0.9rem;color:var(--primary-navy);">Marking Scheme:</label>
+            <span style="font-size:0.85rem;color:var(--text-muted);">+2 for Correct, -0.5 for Wrong</span>
+          </div>
+        </div>
+
+        <!-- Start Button -->
+        <div style="text-align: center;">
+          <div id="statusBannerMatch"></div>
+          <button type="button" class="btn-big-action" id="startMatchBtn" onclick="handleStartMatch('result.html')">
+            <span>⚡</span>
+            <span>Start Auto Matching & View Result</span>
+          </button>
+          <p style="margin-top:0.75rem;font-size:0.82rem;color:var(--text-muted);">⏱️ AI को पेपर पढ़ने और मैच करने में 30-60 सेकंड लग सकते हैं</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span>❤️</span> I LOVE EXAM MATCHER
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="match.html">Match</a></li>
+        <li><a href="omr-set.html">OMR Set</a></li>
+        <li><a href="result.html">Result</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <p class="footer-copy">
+        © 2026 I LOVE EXAM MATCHER. Fast and Accurate Paper Matching.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
